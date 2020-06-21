@@ -3,3 +3,54 @@
     padding:0;
     box-sizing: border-box;
 }
+
+h1{
+    font-size:3.5rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.instructions{
+    margin: 2rem 30%;
+    margin-bottom: 0;
+}
+p{
+    font-size: 1rem;
+    padding: 10px;
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+span{
+    color: purple;
+    font-size: 1.3rem;
+}
+
+.purple-link{
+    padding: 10px;
+    background:purple;
+    color: white;
+    margin:20px 5px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    transition: .3s ease;
+    border-radius: 10px;
+}
+
+.purple-link:hover{
+    color: purple;
+    background: white;
+    border: 2px solid purple;
+    font-weight: bolder;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+}
