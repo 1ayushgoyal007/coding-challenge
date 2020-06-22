@@ -16,6 +16,9 @@ navigator.msGetUserMedia;
 var video = document.querySelector("#video");
 var audio = document.querySelector("#audio");
 var canvas  = document.querySelector("#canvas");
+var secondHeading = document.querySelector('.second-heading');
+var pause = document.querySelector('.pause');
+var resume = document.querySelector('.resume');
 
 const context = canvas.getContext('2d');
 let model;
@@ -24,7 +27,8 @@ handTrack.startVideo(video).then(status => {
     if(status){
         navigator.getUserMedia({video:{}}, stream => {
             video.srcObject = stream;
-            setInterval(runDetection, 100)
+            secondHeading.style.display = "none";
+            setInterval(runDetection, 100);
         },
         err => {console.log(err);}
         );
@@ -38,8 +42,14 @@ function runDetection(){
 
         if(predictions.length > 0){
             audio.pause();
+            pause.style.display= "block";
+            resume.style.display = "none";
+
         }else{
             audio.play();
+            resume.style.display  = "block";
+            pause.style.display = "none";
+
         }
     });
 }
